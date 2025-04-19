@@ -19,7 +19,7 @@ public class Lista {
         String opcaoEscolhida = input.nextLine();
         System.out.println("Você escolheu a opção: " + opcaoEscolhida);
 
-        switch(opcaoEscolhida){
+        switch(Integer.parseInt(opcaoEscolhida)){
             case 1:
                 System.out.println("Digite a tarefa: ");
                 String tarefa = input.nextLine();
