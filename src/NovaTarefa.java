@@ -1,11 +1,12 @@
 public class NovaTarefa {
     private String tarefa;
 
-    public NovaTarefa(String tarefaNova){
+    public String adicionarTarefa(String tarefaNova){
         this.tarefa = tarefaNova;
+        return tarefa;
     }
 
     public String getTarefa(){
-        return this.tarefa;
+        return tarefa;
     }
 }
