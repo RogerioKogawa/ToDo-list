@@ -5,8 +5,4 @@ public class NovaTarefa {
         this.tarefa = tarefaNova;
         return tarefa;
     }
-
-    public String getTarefa(){
-        return tarefa;
-    }
 }
