@@ -1,3 +1,5 @@
+package com.rogeriokogawa.todolist.model;
+
 public class NovaTarefa {
     private String tarefa;
 

@@ -1,3 +1,12 @@
+package com.rogeriokogawa.todolist.app;
+
+import com.rogeriokogawa.todolist.model.NovaTarefa;
+import com.rogeriokogawa.todolist.service.AtualizarTarefa;
+import com.rogeriokogawa.todolist.service.ConcluirTarefa;
+import com.rogeriokogawa.todolist.service.DeletarTarefa;
+import com.rogeriokogawa.todolist.service.ListaService;
+import com.rogeriokogawa.todolist.util.MostrarMenu;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,10 +17,12 @@ public class Lista {
     static AtualizarTarefa atualizarTarefa = new AtualizarTarefa();
     static ConcluirTarefa concluirTarefa = new ConcluirTarefa();
     static MostrarMenu menu = new MostrarMenu();
+    static ListaService service = new ListaService();
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         while(true) {
+            service.imprimirLista(lista);   
             String opcaoEscolhida = menu.mostrarMenu();
 
             switch (Integer.parseInt(opcaoEscolhida)) {

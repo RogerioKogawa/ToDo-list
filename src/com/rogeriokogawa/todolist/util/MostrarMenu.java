@@ -1,7 +1,9 @@
+package com.rogeriokogawa.todolist.util;
+
 import java.util.Scanner;
 
 public class MostrarMenu {
-    protected String mostrarMenu(){
+    public String mostrarMenu(){
         Scanner input = new Scanner(System.in);
 
         System.out.println("Escolha uma das opções: ");
