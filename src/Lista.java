@@ -7,18 +7,12 @@ public class Lista {
     static DeletarTarefa deletaTarefa = new DeletarTarefa();
     static AtualizarTarefa atualizarTarefa = new AtualizarTarefa();
     static ConcluirTarefa concluirTarefa = new ConcluirTarefa();
+    static MostrarMenu menu = new MostrarMenu();
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         while(true) {
-            System.out.println("Escolha uma das opções: ");
-
-            System.out.println("1 - Criar uma nova tarefa");
-            System.out.println("2 - Deletar uma tarefa");
-            System.out.println("3 - Modificar uma tarefa");
-            System.out.println("4 - Marcar uma tarefa como concluída");
-            String opcaoEscolhida = input.nextLine();
-            System.out.println("Você escolheu a opção: " + opcaoEscolhida);
+            String opcaoEscolhida = menu.mostrarMenu();
 
             switch (Integer.parseInt(opcaoEscolhida)) {
                 case 1:
