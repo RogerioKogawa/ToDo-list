@@ -7,6 +7,7 @@ import com.rogeriokogawa.todolist.service.DeletarTarefa;
 import com.rogeriokogawa.todolist.service.ListaService;
 import com.rogeriokogawa.todolist.util.MostrarMenu;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,11 +19,11 @@ public class Lista {
     static ConcluirTarefa concluirTarefa = new ConcluirTarefa();
     static MostrarMenu menu = new MostrarMenu();
     static ListaService service = new ListaService();
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
 
         while(true) {
-            service.imprimirLista(lista);   
+            service.imprimirLista(lista);
             String opcaoEscolhida = menu.mostrarMenu();
 
             switch (Integer.parseInt(opcaoEscolhida)) {
