@@ -11,12 +11,11 @@ public class ListaService {
         System.out.println();
         for(int i = 0; i< lista.size(); i++){
             System.out.println((i+1) + "-) "+ lista.get(i));
-            atualizarArquivo("C:\\\\Users\\\\roger\\\\Desktop\\\\arquivotxttodolist\\\\lista.txt", lista.get(i));
         }
         System.out.println();
     }
 
-    private boolean atualizarArquivo(String caminho, String tarefa) throws IOException{
+    public boolean atualizarArquivo(String caminho, String tarefa) throws IOException{
         try{
             FileWriter arquivo = new FileWriter(caminho,true);
             PrintWriter gravarArquivo = new PrintWriter(arquivo);

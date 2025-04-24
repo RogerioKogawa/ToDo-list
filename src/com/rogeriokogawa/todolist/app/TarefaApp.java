@@ -2,18 +2,19 @@ package com.rogeriokogawa.todolist.app;
 
 import com.rogeriokogawa.todolist.interfaces.ITarefaService;
 import com.rogeriokogawa.todolist.model.Tarefa;
+import com.rogeriokogawa.todolist.service.TarefaService;
 import com.rogeriokogawa.todolist.util.MostrarMenu;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Lista {
+public class TarefaApp {
     static ArrayList<Tarefa> listaTarefas = new ArrayList<Tarefa>();
     static MostrarMenu menu = new MostrarMenu();
     private static ITarefaService _tarefaService;
 
-    public Lista(ITarefaService tarefaService)
+    public TarefaApp(ITarefaService tarefaService)
     {
         _tarefaService = tarefaService;
     }
@@ -22,7 +23,6 @@ public class Lista {
         Scanner input = new Scanner(System.in);
 
         while(true) {
-            _tarefaService.imprimirLista();
             String opcaoEscolhida = menu.mostrarMenu();
 
             switch (Integer.parseInt(opcaoEscolhida)) {
@@ -51,6 +51,7 @@ public class Lista {
                     _tarefaService.terminarTarefa(idTarefaConcluida);
                     break;
             }
+            _tarefaService.imprimirLista();
         }
     }
 }
