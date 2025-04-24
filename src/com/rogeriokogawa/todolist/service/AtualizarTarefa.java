@@ -11,6 +11,6 @@ public class AtualizarTarefa {
         System.out.println("Digite o novo nome da tarefa: ");
         String tarefaModificada = input.nextLine();
         listaTarefas.set(idTarefa - 1, tarefaModificada);
-        service.atualizarArquivo("C:\\\\Users\\\\roger\\\\Desktop\\\\arquivotxttodolist\\\\lista.txt", listaTarefas);
+        service.atualizarArquivo("", listaTarefas);
     }
 }
