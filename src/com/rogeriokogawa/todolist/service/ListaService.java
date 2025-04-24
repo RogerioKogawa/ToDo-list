@@ -16,7 +16,7 @@ public class ListaService {
         System.out.println();
     }
 
-    private boolean atualizarArquivo(String caminho, String tarefa) throws IOException{
+    public boolean atualizarArquivo(String caminho, String tarefa) throws IOException{
         try{
             FileWriter arquivo = new FileWriter(caminho,true);
             PrintWriter gravarArquivo = new PrintWriter(arquivo);
