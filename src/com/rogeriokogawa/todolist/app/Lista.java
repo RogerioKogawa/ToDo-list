@@ -21,7 +21,7 @@ public class Lista {
     static ListaService service = new ListaService();
     public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
-
+        
         while(true) {
             service.imprimirLista(lista);
             String opcaoEscolhida = menu.mostrarMenu();
@@ -30,8 +30,7 @@ public class Lista {
                 case 1:
                     System.out.println("Digite a tarefa: ");
                     String tarefa = input.nextLine();
-                    novaTarefa.adicionarTarefa(tarefa);
-                    lista.add(tarefa);
+                    novaTarefa.adicionarTarefa(tarefa, lista);
                     break;
                 case 2:
                     System.out.println("Digite o número da tarefa: ");
